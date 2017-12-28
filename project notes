@@ -1,0 +1,20 @@
+* how do i want it to work
+  - there is the highest level of abstraction, levels like: my future job prospects, my ability to be effectivley productive and maximise my time being productive, socialising with other people, having a great relationship with cameron, having new experiences, dealing with adhd, shitty family, dealing with daily life bullshit, following my interests, finding ways to psychologically enlighten, looking for the best ways to approach different things, understanding how im different comapred to others.
+  - most things come under these levels of abstraction, eg: dealing with adhd could be building this app which is a child of this, and building this app needs to have several parts combined to work, the project planning, the code to make the interface work, the right ways to abstract the logic, the design and usability, the way the code is architected, but makeing this app is also a child of maximising productivity, and is also for future job prospects, and following interests, so it has serveral supers and several subs
+  -you can select any level of abstraction and the interface will put that in centter focus, and it will show all direct first level supers and subs and anything related. every 1st level item will show 4 numbers, how many are in direct up total up, direct sub and total sub.
+  - when a user wants to make an entry they can just simply go in and type and enter and just leave it there, it wont be deleted it will be saved, when you revisit it will be sitting there and then you can hit save to clear it and enter a new one. you dont have to tag it straight away, if you dont tag it, it will be addded to an 'untagged list', when you visit the app you may see in the corner, 3 untags items, you can then whenever you feel tag up all the relations of your system
+
+
+* app services
+ - if created 2 of the same, will display a merge view where you see 3 items, 3rd is the new merged one, you highlight the txt and click add, quick merge, also allows you to merge there tags and sub tags
+ - can show icons for up down and alarms, number of tasks, notes, ideas
+ - multiple different views, that hide or show more/less text for more/less items in the tree view, in no text view you will not see any preview text or number count on tasks and alarms, or supers or subs, just the subs of the lowest subs
+ - the colour coding will be automatic and a legend will be displayed at all times to show what things are
+ -
+
+ * app features
+ - nav items favorite view is your default, you have top level button, you have 3 or 4 views for scale, close in show main feature in middle with txt preview, with 1st level items text preview with all their count values. 4th level is super zoomed out, 1 tier above but 6 or 7 below
+
+
+* what parts do i want to focus on delivering first
+ - i want the part to show that i can demonstrate it in a work context so the same modle can be used for planing and explaining how things work
