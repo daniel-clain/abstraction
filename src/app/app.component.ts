@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { NavItem } from './models/nav-item';
-import { EntityService } from './entity.service';
 import { ViewService } from './view.service';
 
 
 @Component({
   selector: 'root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
   

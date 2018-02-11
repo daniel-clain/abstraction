@@ -1,7 +1,5 @@
-<div class="app-container">
-  <div class="nav-container">
-    <main-nav (navItemSelected)="changeView($event)"></main-nav>
-  </div>
+
+  <main-nav (navItemSelected)="changeView($event)"></main-nav>
   <div class="main-container">
 
     <div class="standard-container" [ngStyle]="{display: view == 'quick_entry' ? 'block' : 'none'}">
@@ -9,14 +7,21 @@
     </div>
 
     <div class="stage-container" [ngStyle]="{display: view == 'stage' ? 'block' : 'none'}">
-      <div class="feature-container">
-        <feature-entity></feature-entity>
+      <div class="stage-top-flexible-container">
+        <div class="standard-container">
+          <feature-entity></feature-entity>
+        </div>
       </div>
-      <div class="right-sidebar">
-        <related-entities [relation_type]="'Super'"></related-entities>
-        <related-entities [relation_type]="'Sub'"></related-entities>
+      <div class="related-entity-container">
+        <div class="super-entity-container">
+          <related-entities [relation_type]="'Super'"></related-entities>
+        </div>
+        <div class="sub-entity-container">
+          <related-entities [relation_type]="'Sub'"></related-entities>
+        </div>
       </div>
     </div>
+
 
     <div class="standard-container" [ngStyle]="{display: view == 'focus_entities' ? 'block' : 'none'}">
       <focus-entities></focus-entities>
@@ -28,4 +33,3 @@
     </div>
 
   </div>
-</div>
