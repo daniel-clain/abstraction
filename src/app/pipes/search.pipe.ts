@@ -7,14 +7,14 @@ import { Entity } from '../models/entity';
 export class SearchPipe implements PipeTransform {
 
   transform(entities: Entity[], search_string: string): Entity[] {
-    if(!search_string){
+    if (!search_string){
       return entities;
     } else {
       return entities.filter((entity: Entity) => {
-        if(entity.name.toLocaleLowerCase().includes(search_string)){
+        if (entity.name.toLocaleLowerCase().includes(search_string)){
           return true;
         }
-      })
+      });
     }
   }
 

@@ -23,7 +23,7 @@ export class NoParentEntitiesComponent implements OnInit {
   
   entitySelected(entity: Entity){
     this.selected_entity = entity;
-    this._viewService.setView('stage')
+    this._viewService.setView('stage');
     this._entityService.setFeatureEntityById(entity.id);
   }
   

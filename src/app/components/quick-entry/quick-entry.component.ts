@@ -27,7 +27,7 @@ export class QuickEntryComponent implements OnInit {
   }
   
   addEntity(entity: Entity){
-    if(this.validate(entity)) {
+    if (this.validate(entity)) {
       this._entityService.addEntity(entity);
       this.resetEntity();
     }
@@ -35,12 +35,12 @@ export class QuickEntryComponent implements OnInit {
   
   
   validate(entity: Entity): boolean{
-    if(entity.name === ''){
-      alert('You must give your entity a name')
-      return false
+    if (entity.name === ''){
+      alert('You must give your entity a name');
+      return false;
     }
-    if(!this.entity.top_level_entity && this.entity.super_entity_ids.length === 0){
-      alert('Warning: ' + this.entity.name +' has no super entities');
+    if (!this.entity.top_level_entity && this.entity.super_entity_ids.length === 0){
+      alert('Warning: ' + this.entity.name + ' has no super entities');
     }
     return true;
   }

@@ -15,8 +15,8 @@ export class AppComponent implements OnInit {
   constructor(private _viewService: ViewService) { }
   
   ngOnInit() {
-    this._viewService.view_subject.subscribe(view =>this.view = view);
-    this._viewService.setView('stage')
+    this._viewService.view_subject.subscribe(view => this.view = view);
+    this._viewService.setView('stage');
   }
   changeView(navItem: NavItem){
     this.view = navItem.viewName;

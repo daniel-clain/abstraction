@@ -36,15 +36,15 @@ export class MainNavComponent implements OnInit {
       displayName: 'No Parent Entities',
       viewName: 'no_parent_entities'
     }
-  ]
+  ];
   
   
   constructor(private _entityService: EntityService, private _viewService: ViewService) { }
   
   ngOnInit() {
     this._entityService.entity_observable.subscribe((entities: Entity[]) => {
-      this.setItemCount('focus_entities', this._entityService.getFocusEntities(entities).length)
-      this.setItemCount('no_parent_entities', this._entityService.getNoParentEntities(entities).length)
+      this.setItemCount('focus_entities', this._entityService.getFocusEntities(entities).length);
+      this.setItemCount('no_parent_entities', this._entityService.getNoParentEntities(entities).length);
     });
   }
   navItemSelected(item){

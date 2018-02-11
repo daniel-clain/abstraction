@@ -21,7 +21,7 @@ export class FocusEntitiesComponent implements OnInit {
   }
   
   entitySelected(entity: Entity){
-    this._viewService.setView('stage')
+    this._viewService.setView('stage');
     this._entityService.setFeatureEntityById(entity.id);
   }
 

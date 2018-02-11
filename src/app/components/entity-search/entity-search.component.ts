@@ -25,12 +25,12 @@ export class EntitySearchComponent implements OnInit {
   
   addRemoveEntity(entity: Entity){
     const indexOfId = this.selectionList.indexOf(entity.id);
-    if(indexOfId >= 0) {
+    if (indexOfId >= 0) {
       this.selectionList.splice(indexOfId, 1);
     } else {
       this.selectionList.push(entity.id);
     }
-    this.selectionMade.emit(this.selectionList)
+    this.selectionMade.emit(this.selectionList);
   }
   
   reset(){

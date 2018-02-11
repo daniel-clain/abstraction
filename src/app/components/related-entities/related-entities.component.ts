@@ -16,17 +16,17 @@ export class RelatedEntitiesComponent implements OnInit{
  
   ngOnInit(){
     this._entity_service.feature_entity_subject.subscribe((feature_entity: Entity) => {
-      if(this.relation_type === 'Sub'){
-        this.entities = this._entity_service.getSubEntities(feature_entity.id)
+      if (this.relation_type === 'Sub'){
+        this.entities = this._entity_service.getSubEntities(feature_entity.id);
       }
-      if(this.relation_type === 'Super'){
-        if(!feature_entity.top_level_entity) {
+      if (this.relation_type === 'Super'){
+        if (!feature_entity.top_level_entity) {
           this.entities = this._entity_service.getEntitiesByIds(feature_entity.super_entity_ids);
         } else {
           delete this.entities;
         }
       }
-    })
+    });
   }
   
   entitySelected(entity: Entity){
