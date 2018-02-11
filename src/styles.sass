@@ -1,0 +1,100 @@
+@import "~ng-pick-datetime/assets/style/picker.min.css"
+
+html, body
+  height: 100%
+  font-size: 12px
+
+label
+  margin-bottom: 0 !important
+  margin-right: 0.5rem
+  font-weight: bold
+
+ul
+  margin: 0
+  padding: 0
+  li
+    list-style: none
+
+li>*
+  vertical-align: middle
+
+input[type="checkbox"]
+  vertical-align: middle
+
+input[type="text"]
+  padding-left: 0.5rem
+
+.entity-button
+  display: inline-block
+  margin: 0.2rem
+  background-color: #C1E8E0
+  color: #15443b
+  font-weight: 500
+  border: none
+  border-radius: 0.2rem
+  cursor: pointer
+  padding: 0.2rem 0.5rem
+  &:focus
+    outline: none
+
+.div-spacing
+  margin: 1rem 0
+  &:last-child
+    margin-bottom: 0
+
+.app-container
+  height: 100%
+  background-color: #1a2429
+  font-size: 0
+  .nav-container, .main-container
+    height: 100%
+    display: inline-block
+    vertical-align: top
+  .nav-container
+    width: 10rem
+    padding: 0.5rem
+    font-size: 0.9rem
+    position: relative
+    z-index: 1
+    background-color: #5F4842
+    color: #D6D1BE
+    font-weight: 500
+  .main-container
+    font-size: 0
+    width: 100%
+    margin-left: -10rem
+    padding-left: 10rem
+    .standard-container
+      height: 100%
+      padding: 1rem
+      width: 100%
+      font-size: 1rem
+    .stage-container
+      height: 100%
+      .feature-container
+        height: 100%
+        margin-right: -15rem
+        padding: 1rem 16rem 1rem 1rem
+        display: inline-block
+        width: 100%
+        font-size: 1rem
+    .content-block
+      border-radius: 0.2rem
+      padding: 1rem
+      background-color: #F1F6F0
+      overflow: hidden
+      overflow-y: scroll
+      max-height: 100%
+  .right-sidebar
+    width: 15rem
+    display: inline-block
+    height: 100%
+    vertical-align: top
+    padding: 1rem 1rem 1rem 0
+    .related-entities-container
+      padding: 0.5rem
+      margin-bottom: 1rem
+      border-radius: 0.2rem
+      background-color: #1A3D3A
+      color: #C1E8E0
+      font-size: 1rem

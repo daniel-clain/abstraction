@@ -1,0 +1,14 @@
+<div class="content-block">
+  <h5>No Parent Entities</h5>
+  <div class="div-spacing">
+    <button
+      class="entity-button"
+      *ngFor="let entity of no_parent_entities"
+      (click)="entitySelected(entity)">
+      {{entity.name}}
+    </button>
+  </div>
+</div>
+
+
+

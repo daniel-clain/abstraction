@@ -1,0 +1,50 @@
+<div class="todos-container">
+  <button type="button" (click)="resetTodo()">New To-Do Item</button>
+  <div class="feature-todo container-fluid no-gutters">
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+        <textarea [(ngModel)]="feature_todo.details"></textarea>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="item-attribute difficulty">
+          <label>Difficulty:</label>
+          <select class="field" [(ngModel)]="feature_todo.difficulty">
+            <option *ngFor="let difficulty of difficulty_list" [value]="difficulty">{{difficulty}}</option>
+          </select>
+        </div>
+        <div class="item-attribute priority">
+          <label>Priority:</label>
+          <select class="field" [(ngModel)]="feature_todo.priority">
+            <option *ngFor="let priority of priority_list" [value]="priority">{{priority}}</option>
+          </select>
+        </div>
+        <div class="item-attribute due-date">
+          <label>Due Date:</label>
+          <input
+            class="field"
+            [(ngModel)]="feature_todo.due_date"
+            [owlDateTime]="dt1"
+            [owlDateTimeTrigger]="dt1">
+          <owl-date-time #dt1></owl-date-time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="updateFeatureTodo(feature_todo)">{{!feature_todo.due_date ? 'Add' : 'Update' }}</button>
+
+  <hr>
+
+  <ul class="todo-list">
+    <li *ngFor="let item of todo_items" (dblclick)="editTodo(item)">
+      <div class="todo-details">{{item.details}}</div>
+      <span class="priority item-attribute">P: {{item.priority}}</span>
+      <span class="difficulty item-attribute">D: {{item.difficulty}}</span>
+      <span class="due-date item-attribute">{{item.due_date | date: 'd/M/y'}}</span>
+      <span class="delete" (dblclick)="deleteToDoItem(item)">Delete</span>
+    </li>
+  </ul>
+
+</div>
+
+

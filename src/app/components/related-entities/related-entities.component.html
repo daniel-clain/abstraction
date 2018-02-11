@@ -1,0 +1,9 @@
+<div class="related-entities-container">
+  <h6>{{relation_type}} Entities</h6>
+  <button
+    class="entity-button"
+    *ngFor="let entity of entities"
+    (click)="entitySelected(entity)">
+    {{entity.name}}
+  </button>
+</div>

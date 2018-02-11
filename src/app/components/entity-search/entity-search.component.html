@@ -1,0 +1,14 @@
+<div class="entity-search-container">
+  <label>Search: </label><input type="text" [(ngModel)]="search_string">
+  <ul>
+    <li *ngFor="let entity of allEntities | entityNameFilter : search_string">
+      <input
+        type="checkbox"
+        [checked]="selectionList.indexOf(entity.id) >= 0"
+        (change)="addRemoveEntity(entity)">
+      <span>{{entity.name}}</span>
+    </li>
+  </ul>
+
+</div>
+

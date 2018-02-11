@@ -1,0 +1,51 @@
+<div class="content-block" *ngIf="feature_entity">
+  <h1 class="feature-heading">{{feature_entity.name}}</h1>
+
+  <div class="div-spacing">
+    <label>Edit Entity Name: </label>
+    <input type="text" [(ngModel)]="feature_entity.name" (change)="updateEntity()">
+  </div>
+
+
+  <div class="div-spacing">
+    <label>Focus Entity: </label>
+    <input type="checkbox" [(ngModel)]="feature_entity.focus_entity" (change)="updateEntity()">
+  </div>
+
+
+  <div class="div-spacing" *ngIf="!feature_entity.top_level_entity">
+    <button (click)="show_super_list = !show_super_list">Super Entities: Add/Remove</button>
+    <entity-search
+      [ngStyle]="{display: show_super_list ? 'block' : 'none'}"
+      [selectionType]="multiple"
+      [selectionList]="feature_entity.super_entity_ids"
+      (selectionMade)="updateEntity()"
+    ></entity-search>
+  </div>
+
+  <div class="div-spacing">
+    <button (click)="show_sub_list = !show_sub_list">Sub Entities: Add/Remove</button>
+    <entity-search
+      [ngStyle]="{display: show_sub_list ? 'block' : 'none'}"
+      [selectionType]="multiple"
+      [selectionList]="sub_entities_id_list"
+      (selectionMade)="updateSubEntities()"
+    ></entity-search>
+  </div>
+
+  <div class="div-spacing">
+    <button (click)="show_todos = !show_todos">To-Do Items</button>
+    <manage-todos
+      [ngStyle]="{display: show_todos ? 'block' : 'none'}"
+      [todo_items]="feature_entity.todo_items"
+      [parent_entity_id]="feature_entity.id"
+      (todosUpdated)="updateEntity()"
+    ></manage-todos>
+  </div>
+
+  <div class="div-spacing" *ngIf="!feature_entity.top_level_entity">
+    <button class="btn btn-danger" (click)="deleteEntity()">Delete Entity</button>
+  </div>
+
+
+</div>

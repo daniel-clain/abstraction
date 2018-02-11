@@ -1,0 +1,29 @@
+<div class="content-block">
+  <h5>Quick Entry</h5>
+
+  <h6>Select Entry Type</h6>
+  <div class="select-entry-type">
+    <div (click)="selectEntryType('entity')">Entity</div>
+    <div (click)="selectEntryType('todo')">To-Do</div>
+    <div (click)="selectEntryType('note')">Note</div>
+  </div>
+
+  <div class="div-spacing entity-input" *ngIf="selectedEntryType === 'entity'">
+    <div class="div-spacing">
+      <label>Entity Name: </label><input [(ngModel)]="entity.name">
+    </div>
+    <div class="div-spacing">
+      <button (click)="showEntitiesList = !showEntitiesList">Select Super Entities</button>
+      <entity-search
+        [ngStyle]="{display: showEntitiesList ? 'block' : 'none'}"
+        [selectionType]="multiple"
+        [selectionList]="entity.super_entity_ids">
+      </entity-search>
+    </div>
+    <div class="div-spacing">
+      <button (click)="addEntity(entity)">Add Entity</button>
+      <button (click)="resetEntity()">Reset/New</button>
+    </div>
+  </div>
+
+</div>

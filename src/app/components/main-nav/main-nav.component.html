@@ -1,0 +1,10 @@
+<ul>
+  <li
+    class="nav-item"
+    *ngFor="let item of mainNavItems"
+    (click)="navItemSelected(item)">
+    {{item.displayName}}
+    {{item.count  ? '('+item.count+')' : ''}}
+  </li>
+</ul>
+

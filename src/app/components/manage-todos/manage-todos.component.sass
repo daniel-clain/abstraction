@@ -1,0 +1,52 @@
+
+
+.todos-container
+  margin: 1rem 0
+  padding: 1rem
+  border: 1px solid #e5e5e5
+  .feature-todo
+    margin: 1rem 0
+    textarea
+      width: 100%
+      resize: none
+      height: 10rem
+      overflow-y: scroll
+      padding: 0.5rem
+      margin-bottom: 1rem
+    .item-attribute
+      margin-bottom: 0.5rem
+      label
+        width: 5rem
+      .field
+        width: 8rem
+  .todo-list li
+    position: relative
+    .todo-details
+      height: 3rem
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      border-bottom: 0.1rem dashed #f2f2f2
+      background: white
+      padding: 0.5rem 9.5rem 0.5rem 0.5rem
+    span
+      position: absolute
+      &.item-attribute
+        right: 5rem
+        font-size: 0.7rem
+      &.delete
+        right: 0.5rem
+        top: 0.5rem
+        background-color: #f7a7a7
+        color: #df0000
+        padding: 0.2rem 0.5rem
+        border-radius: 0.2rem
+        font-weight: 500
+        cursor: pointer
+      &.priority
+        top: 0.1rem
+      &.difficulty
+        top: 0.9rem
+      &.due-date
+        top: 1.7rem
+
